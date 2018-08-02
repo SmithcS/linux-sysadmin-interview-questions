@@ -43,11 +43,24 @@ A collection of linux sysadmin/devops interview questions. Feel free to contribu
 * Tell me about the biggest mistake you've made in [some recent time period] and how you would do it differently today. What did you learn from this experience?
 * Why we must choose you?
 * What function does DNS play on a network?
+> DNS takes domain names that we understand (for example, smithsopp.com) and turns them into internet IP addresses (and vice versa).  
 * What is HTTP?
+> Hyper Text Transfer Protocol (HTTP) is a client-server Application layer protocol, and the primary protocol used for data communication on the WWW. 
 * What is an HTTP proxy and how does it work?
+> An HTTP proxy is an intermediate connection (sometimes another server) between a client and a server that allows communication between the two without stictly requiring them to share identities. Proxies work by having the client send all its requests to the proxy, which will forward the request to the server. Responses from the server are returned to the client in the same way.  
 * Describe briefly how HTTPS works.
+> HTTPS is a secure version of the HTTP protocol. Secure communication is acheived by using transmissions using TLS (formerly SSL). TLS is a cryptographic protocol that provides confidentiality and data integrity through key exchanges and certificates.  
 * What is SMTP? Give the basic scenario of how a mail message is delivered via SMTP.
+> Simple Mail Transfer Protocol (SMTP) is the internet standard for email transmissions. A typical transmission may go like this:
+> *MAIL* command, specifies the return address
+> *RCPT* command, specifies the recipient address
+> *DATA* command, signals incoming message text to SMTP server
 * What is RAID? What is RAID0, RAID1, RAID5, RAID10?
+> Redundant Array of Idependent Disks (RAID) is a technology used to increase the reliability and/or performance of data storage. RAID comes in different levels, each with their own strengths and intended use cases.
+> RAID0 (Striping) - Data is split into blocks and further split across disks in the array. This allows for great I/O performance, as each drive can independently read or write from a block in the RAID. Ideal for non-critical data being written to and read often.
+> RAID1 (Mirroring) - Data is mirrored between drives for redundancy. This is ideal for critical data, as there is no longer a single point of failure.
+> RAID5 (Striping with Parity) - Similar to RAID0, data is split into blocks across drives. Each drive will also have an additional parity block, containing a checksum of data written from a different drive. This allows lost data to be rewritten from information in the parity block, and allows for at most 1 drive failure. i
+> RAID10 (Mirroring and Striping) - A combination of RAID1 and RAID 0. Data is split into blocks and further split across disks in the array, each disk is also mirrored. This means that you reap the benefits of both RAID1 and RAID0 configurations, with the downside being half of all drive capacity is spent on mirroring data.
 * What is a level 0 backup? What is an incremental backup?
 * Describe the general file system hierarchy of a Linux system.
 
